@@ -20,7 +20,6 @@ jobs:
         run: npm run test
   lint:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Get source code
         uses: actions/checkout@v3
@@ -34,7 +33,7 @@ jobs:
       - name: Build application
         run: npm run lint
   build:
-    needs: lint
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - name: Get source code
