@@ -8,6 +8,7 @@
         "no-console": "warn",
         "quotes": ["warn", "single"],
         "prefer-const": "error",
-        "semi": ["warn", "always"]
+        "semi": ["warn", "always"],
+        "indent": ["error", 2]
     }
 }
