@@ -69,7 +69,7 @@ jobs:
         run: npm run predeploy
       - name: Deploy appliction
         run: |
-         git config --global user.name "Danylo Melnychuk"
+         git config --global user.name "danylo-melnychuk"
          git config --global user.email "jerrylite219@gmail.com"
          npm run deploy
 
