@@ -1,13 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./components/Home/Home";
-import { Header } from "./components/Header/Header";
+import { Matches } from "./components/Matches/Matches";
+import { Navigation } from "./components/Navigation/Navigation";
+import { Teams } from "./components/Teams/Teams";
 
 function App() {
   return (
     <>
-      <Header />
+      <Navigation>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/matches" element={<Matches />} />
+          <Route path="/teams" element={<Teams />} />
+        </Routes>
+      </Navigation>
     </>
   );
 }
