@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/sfa-app/static/css/main.073c9b0a.css",
-    "main.js": "/sfa-app/static/js/main.c7dcf80a.js",
+    "main.css": "/sfa-app/static/css/main.29311171.css",
+    "main.js": "/sfa-app/static/js/main.87e1b4ba.js",
     "static/js/787.810c1bb6.chunk.js": "/sfa-app/static/js/787.810c1bb6.chunk.js",
-    "static/media/logo.svg": "/sfa-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/sfa-app/index.html",
-    "main.073c9b0a.css.map": "/sfa-app/static/css/main.073c9b0a.css.map",
-    "main.c7dcf80a.js.map": "/sfa-app/static/js/main.c7dcf80a.js.map",
+    "main.29311171.css.map": "/sfa-app/static/css/main.29311171.css.map",
+    "main.87e1b4ba.js.map": "/sfa-app/static/js/main.87e1b4ba.js.map",
     "787.810c1bb6.chunk.js.map": "/sfa-app/static/js/787.810c1bb6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.c7dcf80a.js"
+    "static/css/main.29311171.css",
+    "static/js/main.87e1b4ba.js"
   ]
 }
