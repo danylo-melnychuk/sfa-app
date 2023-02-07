@@ -1,19 +1,21 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./components/Home/Home";
-import { Matches } from "./components/Matches/Matches";
+import { NavigationRoutes } from "./components/helpers/route";
+import { Loader } from "./components/Loader/Loader";
 import { Navigation } from "./components/Navigation/Navigation";
-import { Teams } from "./components/Teams/Teams";
 
 function App() {
   return (
     <>
       <Navigation>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/matches" element={<Matches />} />
-          <Route path="/teams" element={<Teams />} />
-        </Routes>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            {NavigationRoutes.map((x) => (
+              <Route key={x.id} path={x.path} element={<x.component />} />
+            ))}
+          </Routes>
+        </Suspense>
       </Navigation>
     </>
   );
