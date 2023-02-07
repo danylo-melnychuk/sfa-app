@@ -9,5 +9,6 @@
         "prefer-const": "error",
         "semi": ["warn", "always"],
         "indent": ["error", 2]
-    }
+    },
+    "ignorePatterns": ["./src/index.css"]
 }
