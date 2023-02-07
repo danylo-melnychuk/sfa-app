@@ -5,13 +5,6 @@ import { NavigationRoutes } from "./components/helpers/route";
 import { Loader } from "./components/Loader/Loader";
 import { Navigation } from "./components/Navigation/Navigation";
 
-// const Loading = () => {
-//   return (
-//     <>
-//       <div>PreLoad</div>
-//     </>
-//   );
-// };
 function App() {
   return (
     <>
