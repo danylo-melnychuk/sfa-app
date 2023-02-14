@@ -1,6 +1,9 @@
 import { ILeague } from "../../models/ILeague";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+<<<<<<< HEAD
 import { fetchLeagues } from "./ActionCreators";
+=======
+>>>>>>> 305367bd2178ef19a63156c150ed1402d67e5433
 
 interface LeagueState {
   leagues: ILeague[];
