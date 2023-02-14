@@ -1,12 +1,12 @@
 import { FC, useEffect } from "react";
 import { useLeagueDispatch, useLeagueSelector } from "../../hooks/redux";
-import { getLeagues } from "../../store/reducers/ActionCreators";
+import { fetchLeagues } from "../../store/reducers/ActionCreators";
   
 export const Home: FC = () => {
-  const dispatch = useLeagueDispatch();
   const { leagues } = useLeagueSelector((state) => state.leagueReducer);
+  const dispatch = useLeagueDispatch();
 
-  useEffect(() => dispatch(getLeagues()), []);
+  useEffect(() => {dispatch(fetchLeagues())}, []);
 
   return (
     <>

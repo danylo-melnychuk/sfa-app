@@ -7,7 +7,7 @@ const Teams = lazy(() => import("../Teams"));
 export const NavigationRoutes = [
   {
     id: 1,
-    path: "/home",
+    path: "/",
     component: Home,
   },
   {
