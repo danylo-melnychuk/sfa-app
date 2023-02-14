@@ -1,8 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ILeague } from "../../models/ILeague";
-import { AppDispatch } from "../store";
-import { leagueSlice } from "./LeagueSlice";
 
 
 export const fetchLeagues = createAsyncThunk(
@@ -17,6 +15,6 @@ export const fetchLeagues = createAsyncThunk(
         },
       }
     );
-    return response.data
+    return response.data;
   }
 )
