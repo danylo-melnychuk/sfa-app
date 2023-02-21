@@ -3,13 +3,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { fetchLeagues } from "./ActionCreators";
 
 interface LeagueState {
-  leagues: ILeague[];
+  leagues: ILeague[] | null;
   isLoading: boolean;
   error: string;
 }
 
 const initialState: LeagueState = {
-  leagues: [],
+  leagues: null,
   isLoading: false,
   error: "",
 };
@@ -17,27 +17,15 @@ const initialState: LeagueState = {
 export const leagueSlice = createSlice({
   name: "league",
   initialState,
-  reducers: {
-    getLeague(state) {
-      state.isLoading = true;
-    },
-
-    getLeagueSuccess(state, action: PayloadAction<ILeague[]>) {
-      state.isLoading = false;
-      state.error = "";
-      state.leagues = action.payload;
-    },
-
-    getLeagueError(state, action: PayloadAction<string>) {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
-  },
+  reducers: { },
   extraReducers: {
-    [fetchLeagues.fulfilled.type]: (state, action: PayloadAction<ILeague[]>) => {
+    [fetchLeagues.fulfilled.type]: (state, action: PayloadAction<any>) => {
       state.isLoading = false;
       state.error = "";
-      state.leagues = action.payload;
+      console.log(action.payload);
+      if (action.payload) {
+        state.leagues = action.payload.response;
+      }
     },
     [fetchLeagues.pending.type]: (state) => {
       state.isLoading = true;
